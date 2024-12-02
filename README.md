@@ -10,7 +10,7 @@ A powerful TypeScript library for handling various unit conversions with high pr
 
 ## 🌟 Key Features
 
-- 📏 **Multiple Measurement Types**: Support for length, weight, volume, temperature, and more
+- 📐 **Multiple Measurement Types**: Support for length, weight, volume, temperature, and more
 - 🎯 **High Precision Calculations**: Configurable precision for all conversions
 - 🔍 **Type Safety**: Full TypeScript support with comprehensive type definitions
 - 🌐 **Locale Support**: Format results according to different locales
@@ -31,7 +31,7 @@ npm install measurements-converter
 ```typescript
 import { MeasurementConverter } from 'measurements-converter';
 
-// Simple length conversion
+// Length conversion
 const length = MeasurementConverter.convert(100, 'km', 'm');
 console.log(length);
 /* Output:
@@ -60,7 +60,7 @@ console.log(MeasurementConverter.formatResult(temp));
 const results = MeasurementConverter.batch([
   { value: 1, fromUnit: 'km', toUnit: 'm' },
   { value: 2.5, fromUnit: 'kg', toUnit: 'lb' },
-  { value: 30, fromUnit: 'c', toUnit: 'f' }
+  { value: 30, fromUnit: 'C', toUnit: 'F' }
 ]);
 
 results.forEach(result => {
@@ -81,14 +81,13 @@ if (!validation.isValid && validation.suggestions) {
 ### 🌐 Locale Support
 
 ```typescript
-// Format results with specific locale
+// Format results with specific options
 const result = MeasurementConverter.convert(1, 'km', 'm');
 const formatted = MeasurementConverter.formatResult(result, {
-  locale: 'fr-FR',
   format: 'long'
 });
 console.log(formatted);
-// Output: "1 kilomètre is equal to 1000 mètres"
+// Output: "1 kilometre is equal to 1000 metres"
 ```
 
 ## 📋 Supported Units
@@ -127,9 +126,9 @@ console.log(formatted);
 - Teaspoons (tsp)
 
 ### Temperature
-- Celsius (c)
-- Fahrenheit (f)
-- Kelvin (k)
+- Celsius (C)
+- Fahrenheit (F)
+- Kelvin (K)
 
 ### Area
 - Square Meters (m2)
@@ -183,12 +182,6 @@ interface ConversionOptions {
   precision?: number;
   formatLocale?: string;
   roundingMode?: 'round' | 'ceil' | 'floor';
-}
-
-interface ValidationResult {
-  isValid: boolean;
-  errors?: string[];
-  suggestions?: string[];
 }
 ```
 
