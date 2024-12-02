@@ -1,4 +1,5 @@
-import { TemperatureConverter } from '../../src/converters/temperature.converter';
+import { TemperatureConverter } from '../../src/converters';
+import { ConversionOptions } from '../../src/types';
 
 describe('TemperatureConverter', () => {
   it('should convert Celsius to Fahrenheit correctly', () => {
@@ -17,7 +18,8 @@ describe('TemperatureConverter', () => {
   });
 
   it('should respect precision parameter', () => {
-    const result = TemperatureConverter.convert(0, 'C', 'F', 2);
+    const options: ConversionOptions = { precision: 2 };
+    const result = TemperatureConverter.convert(0, 'C', 'F', options);
     expect(result.toValue).toBe(32.00);
   });
 });
