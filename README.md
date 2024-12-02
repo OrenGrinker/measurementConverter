@@ -1,10 +1,10 @@
 # Measurement Converter
 
-![npm Version](https://img.shields.io/npm/v/measurement-converter)
-![TypeScript](https://img.shields.io/npm/types/measurement-converter)
-![License](https://img.shields.io/npm/l/measurement-converter)
-![Downloads](https://img.shields.io/npm/dm/measurement-converter)
-![Node Version](https://img.shields.io/node/v/measurement-converter)
+![npm Version](https://img.shields.io/npm/v/measurements-converter)
+![TypeScript](https://img.shields.io/npm/types/measurements-converter)
+![License](https://img.shields.io/npm/l/measurements-converter)
+![Downloads](https://img.shields.io/npm/dm/measurements-converter)
+![Node Version](https://img.shields.io/node/v/measurements-converter)
 
 A powerful TypeScript library for handling various unit conversions with high precision and type safety. Perfect for applications requiring measurement conversions, scientific calculations, and engineering tools.
 
@@ -21,7 +21,7 @@ A powerful TypeScript library for handling various unit conversions with high pr
 ## 📦 Installation
 
 ```bash
-npm install measurement-converter
+npm install measurements-converter
 ```
 
 ## 🚀 Quick Start
@@ -29,7 +29,7 @@ npm install measurement-converter
 ### Basic Conversions
 
 ```typescript
-import { MeasurementConverter } from 'measurement-converter';
+import { MeasurementConverter } from 'measurements-converter';
 
 // Simple length conversion
 const length = MeasurementConverter.convert(100, 'km', 'm');
